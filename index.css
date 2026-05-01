@@ -738,6 +738,10 @@ img {
   color: #999;
 }
 
+/* --- Custom overrides --- */
+.newsletter-banner { height: 550px; }
+.newsletter-title { font-size: 3.5rem; }
+
 /* --- Responsive --- */
 @media (max-width: 1200px) {
   .hero-meta-grid { gap: 40px; }
@@ -748,15 +752,44 @@ img {
   .news-card.large, .news-card.small { grid-column: span 6; }
   .topic-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr; }
+  .iotd-grid { grid-template-columns: 1fr; gap: 40px; }
+  .birthday-banner { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 768px) {
+  .hero { height: auto; min-height: 100vh; padding-top: 120px; justify-content: flex-start; }
+  .hero-footer { position: relative; margin-top: 60px; padding-bottom: 30px; }
   .container { padding: 0 24px; }
   .nav-links, .search-wrap, .explore-btn span { display: none; }
-  .hero-title { font-size: 3.5rem; }
-  .hero-meta-grid { flex-direction: column; gap: 24px; }
-  .footer-top { grid-template-columns: 1fr; }
+  .hero-content-wrapper { padding-left: 0; margin-top: 0; }
+  .hero-title { font-size: 2.8rem; }
+  .hero-desc { font-size: 1rem; }
+  .hero-meta-grid { flex-direction: column; gap: 20px; }
+  .meta-value { font-size: 1.4rem; }
+  .hero-footer-content { flex-direction: column; align-items: flex-start; gap: 30px; padding-bottom: 20px; }
+  .footer-top { grid-template-columns: 1fr; gap: 40px; padding-bottom: 40px; }
   .news-card.large, .news-card.small { grid-column: span 12; }
-  .banner { height: auto; padding: 60px 0; }
+  .news-grid { gap: 24px; }
+  .banner { height: auto; padding: 60px 0; margin: 40px 0; }
+  .newsletter-banner { height: auto; }
+  .newsletter-title { font-size: 2.2rem; }
+  .banner-title { font-size: 2.2rem; }
+  .banner-desc { font-size: 1.1rem; }
   .footer-bottom { flex-direction: column; gap: 24px; align-items: flex-start; }
+  .section-title { font-size: 2rem; margin-bottom: 20px; }
+  .iotd-section, .birthday-section, .featured-news { padding: 60px 0; }
+  .more-images, .more-topics { padding-bottom: 60px !important; }
+  .iotd-grid, .birthday-banner { gap: 30px; }
+}
+
+@media (max-width: 576px) {
+  .container { padding: 0 16px; }
+  .topic-grid { grid-template-columns: 1fr; gap: 16px; }
+  .hero-title { font-size: 2.4rem; }
+  .hero-desc { font-size: 0.95rem; }
+  .btn-nasa { padding: 12px 24px; font-size: 0.9rem; }
+  .logo-wrap { padding: 0 16px; }
+  .news-card.large .card-title, .news-card.small .card-title { font-size: 1.2rem; }
+  .iotd-text p, .birthday-text p { font-size: 1rem; }
+  .nasa-footer { padding: 60px 0 30px; }
 }
